@@ -12,12 +12,24 @@
 
 
 @interface RepeatHorizontalScrollView : UIView<UIScrollViewDelegate>{
+    NSInteger _cellWidth;
+    NSInteger _cellHeight;
+    CGRect _cellBounds;
     UIScrollView *_scrollView;
     NSTimer *_timer;
     NSInteger _currentIndex;
+    NSInteger _currentOffsetIndex;
     NSInteger _total;
     NSMutableDictionary *_dictionaryCells;
     UIPageControl *_pageControl;
+    
+    
+    UIView *_leftView;
+    UIView *_rightView;
+    UIView *_centerView;
+    NSInteger _leftIndex;
+    NSInteger _rightIndex;
+    NSInteger _centerIndex;
 }
 @property (nonatomic, weak) id<RepeatHorizontalScrollViewDelegate> delegate;
 
