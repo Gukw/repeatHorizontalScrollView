@@ -24,23 +24,6 @@
     view.delegate = self;
     [self.view addSubview:view];
     [view run];
-    
-    
-//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 140)];
-//    [self.view addSubview:scrollView];
-//    scrollView.contentOffset = CGPointMake(300, 0);
-//    UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(320, 0, 320, 140)];
-//    image.image = [UIImage imageNamed:@"png_1"];
-//    [scrollView addSubview:image];
-//    
-////                             NSLog(@"_scrollView contnentOffset:%@, view.frame:%@",NSStringFromCGPoint(scrollView.contentOffset), NSStringFromCGRect(image.frame));
-//    UIPageControl *_pageControl = [[UIPageControl alloc] init];
-//
-//    _pageControl=[[UIPageControl alloc]initWithFrame:CGRectMake(100,100,100,20)];
-//    _pageControl.backgroundColor = [UIColor yellowColor];
-//    _pageControl.currentPage=0;
-//    _pageControl.numberOfPages=6;
-//        [self.view addSubview:_pageControl];
 }
 
 - (void)didReceiveMemoryWarning

@@ -17,11 +17,8 @@
     CGRect _cellBounds;
     UIScrollView *_scrollView;
     NSTimer *_timer;
-    NSInteger _currentIndex;
-    NSInteger _currentOffsetIndex;
     NSInteger _total;
     NSMutableDictionary *_dictionaryCells;
-    UIPageControl *_pageControl;
     
     
     UIView *_leftView;
@@ -32,9 +29,11 @@
     NSInteger _centerIndex;
 }
 @property (nonatomic, weak) id<RepeatHorizontalScrollViewDelegate> delegate;
-
+@property (nonatomic) UIPageControl *pageControl;
 
 -(void)run;
+-(void)startTimer;
+-(void)stopTimer;
 @end
 
 
