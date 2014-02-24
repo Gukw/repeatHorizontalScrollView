@@ -83,10 +83,11 @@
 }
 -(UIView *)showCell:(NSInteger)index{
     NSInteger indexData = index % _total;
-    NSString *sIndexData = [NSString stringWithFormat:@"%d", indexData];
+    NSString *sIndexData = [NSString stringWithFormat:@"%ld", indexData];
     UIView *view = _dictionaryCells[sIndexData];
     if(view == nil){
         view = [_delegate repeatHorizontalScrollView:self cellForIndex:indexData];
+        _dictionaryCells[sIndexData] = view;
     }
     [_scrollView addSubview:view];
     view.frame = CGRectMake(index * _cellWidth, 0, _cellWidth, _cellHeight);
